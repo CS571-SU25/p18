@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.25rem;
+  background-color: #000000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shoe-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 280px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.shoe-card:hover {
+  transform: translateY(-8px);
 }
 
-.card {
-  padding: 2em;
+.shoe-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.shoe-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.shoe-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
 }
